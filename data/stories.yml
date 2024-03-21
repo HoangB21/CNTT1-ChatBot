@@ -1,0 +1,46 @@
+version: "3.1"
+stories:
+  - story: happy path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_great
+      - action: utter_happy
+  - story: sad path 1
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_happy
+  - story: sad path 2
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: deny
+      - action: utter_goodbye
+
+  - story: Affirm Greeting
+    steps:
+      - intent: affirm
+      - action: utter_greet
+  - story: Bot Challenge
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
+  - story: User introduce
+    steps:
+      - intent: introduce
+      - action: utter_introduce
+  - story: Get information of a lecturer
+    steps:
+      - intent: ask_lecturer_info
+        entities:
+        - lecturer: "Nguyễn Văn A"
+      - action: action_get_lecturer_info
+#      - action: utter_lecturer_info

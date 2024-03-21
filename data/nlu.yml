@@ -1,0 +1,165 @@
+
+version: "3.1"
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - good morning
+      - good evening
+      - good afternoon
+      - xin chào
+      - chào bạn
+      - có ai ở đây không
+      - alo
+      - chào
+      - cúc cu
+      - hú
+      - cốc cốc
+      - /start
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+      - tạm biệt
+      - hẹn gặp lại
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+      - đúng vậy
+      - chuẩn
+      - đúng
+      - chính xác
+      - chuẩn không cần chỉnh
+      - vâng
+      - dạ
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+      - không đúng
+      - không phải
+      - sai rồi
+      - tôi không nghĩ vậy
+      - không
+      - đâu phải như thế
+      - không phải vậy
+      - không phải thế đâu
+      - sai bét
+      - đâu phải vậy
+      - ko
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
+      - hoàn hảo
+      - tuyệt vời
+      - tuyệt diệu
+      - tôi cảm thấy rất tốt
+      - cực kỳ tốt
+      - không tệ lắm
+      - quá tốt
+      - quá hoàn hảo
+      - tuyệt
+      - hay
+      - tốt lắm
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
+      - buồn quá
+      - chán
+      - buồn
+      - chán quá
+      - tôi buồn
+      - tôi chán
+      - tôi không vui
+      - tôi đang không được vui cho lắm
+      - tôi đang không được vui
+      - tôi cảm thấy không vui
+      - tôi đang chán
+      - tôi thấy thật buồn
+      - thật buồn
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a hThôuman?
+  - intent: introduce
+    examples: |
+      - Xin chào, mình là [Hoàng](user_name)
+      - Tôi là [Hoàng](user_name)
+      - Tôi tên là [An](user_name)
+      - Hãy gọi tôi là [Tony](user_name)
+      - Mình tên là [Tom](user_name)
+      - [Linda](user_name)
+      - [Hiếu](user_name)
+      - Tôi tên là [Huy](user_name)
+      - Tôi tên là [Bình](user_name)
+  - intent: ask_lecturer_info
+    examples: |
+      - Thông tin về thầy [Nguyễn Mạnh Hùng](lecturer_name)
+      - Hãy cho biết về cô [Trịnh Thị Vân Anh](lecturer_name)
+      - Thầy [Nguyễn Hoàng Anh](lecturer_name) là ai
+      - Cô [Nguyễn Thị Mai Trang](lecturer_name) là ai?
+      - Cho tôi biết về cô [Trịnh Thị Vân Anh](lecturer_name)
+      - Tôi cần thông tin của cô [Nguyễn Thị Mai Trang](lecturer_name)
+      - Tôi muốn biết về cô [trịnh thị vân Anh](lecturer_name)
+#  - intent: ask_department_info
+#    examples: |
+#      - [Địa chỉ] của khoa ở đâu?
+#      - Cho tôi biết [địa chỉ] của khoa CNTT1
+#      - Tôi cần [địa chỉ] của khoa CNTT1
+#      - Ai là [thư ký] của khoa?
+#      - Tôi cần thông tin của [thư ký]

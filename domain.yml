@@ -1,0 +1,86 @@
+
+version: "3.1"
+intents:
+  - affirm
+  - bot_challenge
+  - deny
+  - goodbye
+  - greet
+  - mood_great
+  - mood_unhappy
+  - introduce
+  - ask_lecturer_info
+
+entities:
+  - user_name
+  - lecturer_name
+  - lecturer_email
+  - lecturer_major
+  - lecturer_research
+
+slots:
+  user_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: user_name
+  lecturer_name:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: lecturer_name
+  lecturer_email:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: lecturer_email
+  lecturer_major:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: lecturer_major
+  lecturer_research:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: lecturer_research
+responses:
+  utter_greet:
+    - text: Hey! How are you?
+    - text: Xin chào!
+    - text: Chào
+    - text: Chào bạn, bạn có thể cho mình biết tên không?
+
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+
+  utter_did_that_help:
+    - text: Did that help you?
+  utter_happy:
+    - text: Great, carry on!
+  utter_goodbye:
+    - text: Bye
+  utter_iamabot:
+    - text: I am a bot, powered by Rasa.
+  utter_introduce:
+    - text: Chào {user_name}, mình là Sara, rất hân hạnh được nói chuyện với bạn ^^
+  utter_lecturer_info:
+    - text: "Thông tin giảng viên {lecturer_name}: Email: {lecturer_email}, Chuyên ngành: {lecturer_major}, Nghiên cứu: {lecturer_research}"
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+actions:
+  - utter_greet
+  - utter_cheer_up
+  - utter_did_that_help
+  - utter_happy
+  - utter_goodbye
+  - utter_iamabot
+  - utter_introduce
+  - action_get_lecturer_info
+  - utter_lecturer_info
